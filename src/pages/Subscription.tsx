@@ -30,7 +30,7 @@ const Subscription = () => {
     // 🔧 RAZORPAY CONFIGURATION SLOT - START
     // ============================================
     // TODO: Replace with your Razorpay Key ID
-    const RAZORPAY_KEY_ID = 'YOUR_RAZORPAY_KEY_ID_HERE';
+    const RAZORPAY_KEY_ID = 'rzp_test_RXQ64OLeXMTt1B';
     
     // TODO: In production, call your backend API to create Razorpay order
     // const orderResponse = await fetch('/api/create-razorpay-order', {
