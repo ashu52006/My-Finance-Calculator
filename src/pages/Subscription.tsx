@@ -26,17 +26,71 @@ const Subscription = () => {
                    duration.includes('3 Month') ? 3 : 
                    duration.includes('6 Month') ? 6 : 12;
 
-    // Simulate Razorpay integration
-    // In production, this would call your backend to create Razorpay order
-    toast.success(`Razorpay payment would be initiated here for ₹${price}`);
+    // ============================================
+    // 🔧 RAZORPAY CONFIGURATION SLOT - START
+    // ============================================
+    // TODO: Replace with your Razorpay Key ID
+    const RAZORPAY_KEY_ID = 'YOUR_RAZORPAY_KEY_ID_HERE';
     
-    // For demo purposes, directly activate subscription
-    setTimeout(() => {
-      activateSubscription(planId as any, months);
-      toast.success('Subscription activated successfully!');
-      setLoading(null);
-      window.location.reload();
-    }, 1500);
+    // TODO: In production, call your backend API to create Razorpay order
+    // const orderResponse = await fetch('/api/create-razorpay-order', {
+    //   method: 'POST',
+    //   body: JSON.stringify({ amount: price * 100, planId, months })
+    // });
+    // const orderData = await orderResponse.json();
+
+    // Razorpay Checkout Options
+    const options = {
+      key: RAZORPAY_KEY_ID,
+      amount: price * 100, // Amount in paise (₹1 = 100 paise)
+      currency: 'INR',
+      name: 'My Finance Calculator',
+      description: `${planId.toUpperCase()} Plan - ${duration}`,
+      // order_id: orderData.orderId, // Use order ID from backend
+      handler: function (response: any) {
+        // Payment successful
+        console.log('Payment Success:', response);
+        // TODO: Verify payment on backend
+        // Then activate subscription
+        activateSubscription(planId as any, months);
+        toast.success('Subscription activated successfully!');
+        setLoading(null);
+        window.location.reload();
+      },
+      prefill: {
+        name: '',
+        email: '',
+        contact: ''
+      },
+      theme: {
+        color: '#3b82f6'
+      },
+      modal: {
+        ondismiss: function() {
+          setLoading(null);
+          toast.error('Payment cancelled');
+        }
+      }
+    };
+
+    // For demo purposes (remove this in production)
+    if (RAZORPAY_KEY_ID === 'YOUR_RAZORPAY_KEY_ID_HERE') {
+      toast.info('Demo mode: Subscription activated without payment');
+      setTimeout(() => {
+        activateSubscription(planId as any, months);
+        toast.success('Subscription activated successfully!');
+        setLoading(null);
+        window.location.reload();
+      }, 1500);
+      return;
+    }
+
+    // Initialize Razorpay
+    const razorpay = new window.Razorpay(options);
+    razorpay.open();
+    // ============================================
+    // 🔧 RAZORPAY CONFIGURATION SLOT - END
+    // ============================================
   };
 
   const isCurrentPlan = (planId: string) => {
