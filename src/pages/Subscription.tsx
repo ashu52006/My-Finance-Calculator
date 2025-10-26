@@ -27,9 +27,8 @@ const Subscription = () => {
                    duration.includes('6 Month') ? 6 : 12;
 
     // ============================================
-    // 🔧 RAZORPAY CONFIGURATION SLOT - START
+    // 🔧 RAZORPAY CONFIGURATION SLOT
     // ============================================
-    // TODO: Replace with your Razorpay Key ID
     const RAZORPAY_KEY_ID = 'rzp_test_RXQ64OLeXMTt1B';
     
     // TODO: In production, call your backend API to create Razorpay order
@@ -72,18 +71,6 @@ const Subscription = () => {
         }
       }
     };
-
-    // For demo purposes (remove this in production)
-    if (RAZORPAY_KEY_ID === 'YOUR_RAZORPAY_KEY_ID_HERE') {
-      toast.info('Demo mode: Subscription activated without payment');
-      setTimeout(() => {
-        activateSubscription(planId as any, months);
-        toast.success('Subscription activated successfully!');
-        setLoading(null);
-        window.location.reload();
-      }, 1500);
-      return;
-    }
 
     // Initialize Razorpay
     const razorpay = new window.Razorpay(options);
