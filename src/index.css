@@ -45,9 +45,13 @@ All colors MUST be HSL.
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(199 89% 48%));
     --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
     --gradient-card: linear-gradient(145deg, hsl(217 33% 17%), hsl(215 28% 17%));
+    --gradient-cta: linear-gradient(135deg, hsl(142 76% 46%), hsl(142 76% 36%));
+    --gradient-premium: linear-gradient(135deg, hsl(38 92% 50%), hsl(38 92% 60%));
     
     --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.15);
     --shadow-card: 0 4px 20px hsl(222 47% 11% / 0.3);
+    --shadow-cta: 0 8px 32px hsl(142 76% 36% / 0.4);
+    --shadow-premium: 0 8px 32px hsl(38 92% 50% / 0.4);
   }
 }
 
