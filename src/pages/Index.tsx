@@ -10,8 +10,11 @@ import { Helmet } from 'react-helmet';
 
 const Index = () => {
   const affiliateLinks = getAffiliateLinks();
-  const bannerLink = affiliateLinks.find(link => link.placement === 'banner' && link.status === 'active');
-  const sidebarLink = affiliateLinks.find(link => link.placement === 'sidebar' && link.status === 'active');
+  const bannerLinks = affiliateLinks.filter(link => link.placement === 'banner' && link.status === 'active' && link.calculatorPage === 'general');
+  const cardLinks = affiliateLinks.filter(link => (link.placement === 'tertiary-card' || link.placement === 'secondary-card') && link.status === 'active' && link.calculatorPage === 'general');
+  const buttonLinks = affiliateLinks.filter(link => (link.placement === 'primary-button' || link.placement === 'secondary-button') && link.status === 'active' && link.calculatorPage === 'general');
+  const sidebarLinks = affiliateLinks.filter(link => link.placement === 'sidebar' && link.status === 'active' && link.calculatorPage === 'general');
+  const contentLinks = affiliateLinks.filter(link => link.placement === 'content-link' && link.status === 'active' && link.calculatorPage === 'general');
 
   const calculators = [
     {
@@ -122,17 +125,82 @@ const Index = () => {
         <AdSenseSlot slot="header" />
       </div>
 
-      {/* Banner Affiliate */}
-      {bannerLink && (
-        <div className="container mx-auto px-4 mb-12">
-          <AffiliateButton
-            id={bannerLink.id}
-            ctaText={bannerLink.ctaText}
-            referralLink={bannerLink.referralLink}
-            placement="banner"
-            partnerName={bannerLink.partnerName}
-          />
+      {/* Banner Affiliates */}
+      {bannerLinks.length > 0 && (
+        <div className="container mx-auto px-4 mb-12 space-y-6">
+          {bannerLinks.map(link => (
+            <AffiliateButton
+              key={link.id}
+              id={link.id}
+              ctaText={link.ctaText}
+              referralLink={link.referralLink}
+              placement="banner"
+              partnerName={link.partnerName}
+            />
+          ))}
         </div>
+      )}
+
+      {/* Featured Partner Offers - Card Grid */}
+      {(cardLinks.length > 0 || buttonLinks.length > 0 || contentLinks.length > 0) && (
+        <section className="container mx-auto px-4 py-12 bg-gradient-to-br from-accent/5 to-success/5 rounded-3xl mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-3">
+              🎁 Exclusive Partner Offers
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Special deals from our trusted financial partners
+            </p>
+          </div>
+          
+          {/* Button Links */}
+          {buttonLinks.length > 0 && (
+            <div className="grid md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
+              {buttonLinks.map(link => (
+                <AffiliateButton
+                  key={link.id}
+                  id={link.id}
+                  ctaText={link.ctaText}
+                  referralLink={link.referralLink}
+                  placement={link.placement}
+                  partnerName={link.partnerName}
+                />
+              ))}
+            </div>
+          )}
+
+          {/* Card Links */}
+          {cardLinks.length > 0 && (
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {cardLinks.map(link => (
+                <AffiliateButton
+                  key={link.id}
+                  id={link.id}
+                  ctaText={link.ctaText}
+                  referralLink={link.referralLink}
+                  placement={link.placement}
+                  partnerName={link.partnerName}
+                />
+              ))}
+            </div>
+          )}
+
+          {/* Content Links */}
+          {contentLinks.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-4">
+              {contentLinks.map(link => (
+                <AffiliateButton
+                  key={link.id}
+                  id={link.id}
+                  ctaText={link.ctaText}
+                  referralLink={link.referralLink}
+                  placement={link.placement}
+                  partnerName={link.partnerName}
+                />
+              ))}
+            </div>
+          )}
+        </section>
       )}
 
       {/* Calculators Grid */}
@@ -164,16 +232,20 @@ const Index = () => {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            {sidebarLink && (
-              <AffiliateButton
-                id={sidebarLink.id}
-                ctaText={sidebarLink.ctaText}
-                referralLink={sidebarLink.referralLink}
-                placement="banner"
-                partnerName={sidebarLink.partnerName}
-              />
-            )}
-            <AdSenseSlot slot="sidebar" />
+            <div className="sticky top-4 space-y-6">
+              <h3 className="text-xl font-bold">⭐ Top Picks</h3>
+              {sidebarLinks.map(link => (
+                <AffiliateButton
+                  key={link.id}
+                  id={link.id}
+                  ctaText={link.ctaText}
+                  referralLink={link.referralLink}
+                  placement="banner"
+                  partnerName={link.partnerName}
+                />
+              ))}
+              <AdSenseSlot slot="sidebar" />
+            </div>
           </div>
         </div>
       </section>
