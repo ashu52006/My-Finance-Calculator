@@ -255,20 +255,221 @@ const RDCalculator = () => {
             </div>
           </div>
 
-          <div className="mt-8">
-            <Card className="p-6 bg-gradient-card">
-              <h2 className="text-2xl font-bold mb-4">Understanding Recurring Deposits</h2>
-              <div className="prose prose-invert max-w-none">
-                <p className="text-muted-foreground mb-3">
-                  Recurring Deposit is an ideal savings product for people with regular income. It combines features of savings account with benefits of fixed deposits.
-                </p>
-                <h3 className="text-lg font-semibold mb-2 mt-4">RD Benefits</h3>
-                <ul className="text-muted-foreground space-y-1">
-                  <li>• Cultivates disciplined savings habit</li>
-                  <li>• Higher returns than savings accounts</li>
-                  <li>• Flexible monthly deposit amounts</li>
-                  <li>• Tenure ranges from 6 months to 10 years</li>
-                </ul>
+          <div className="mt-8 space-y-6">
+            <Card className="p-8 bg-gradient-card">
+              <h2 className="text-3xl font-bold mb-6">Complete Guide to Recurring Deposits (RD) in India 2026</h2>
+              
+              <div className="space-y-6">
+                <div>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Recurring Deposits (RD) are perfect for building wealth through disciplined monthly savings. Unlike Fixed Deposits where you invest a lump sum, RDs allow you to deposit a fixed amount every month, making it ideal for salaried individuals and those with regular income. Our RD calculator helps you plan your monthly savings and calculate exact maturity amounts.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">What is a Recurring Deposit?</h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    A Recurring Deposit is a special savings scheme offered by banks and post offices where you deposit a fixed amount every month for a predetermined period. The interest rate is similar to Fixed Deposits, typically ranging from 5.5% to 7.5% per annum. RD interest is compounded quarterly, and the maturity amount includes your total deposits plus accumulated interest.
+                  </p>
+                  <div className="bg-background/50 p-4 rounded-lg">
+                    <p className="font-semibold mb-2">RD Maturity Formula:</p>
+                    <p className="text-muted-foreground font-mono text-sm">M = P × n × [(1 + r/400)^(4n+3) - (1 + r/400)^2] / [(1 + r/400) - 1]</p>
+                    <p className="text-xs text-muted-foreground mt-2">Where: M = Maturity Amount, P = Monthly Deposit, n = Number of quarters, r = Annual Interest Rate</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Types of Recurring Deposits</h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2">Regular RD</h4>
+                      <p className="text-sm text-muted-foreground">Standard recurring deposit with tenure from 6 months to 10 years. Fixed monthly deposits with quarterly compounding.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2">Post Office RD</h4>
+                      <p className="text-sm text-muted-foreground">Government-backed RD scheme with attractive interest rates and tax benefits under certain conditions.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2">Senior Citizen RD</h4>
+                      <p className="text-sm text-muted-foreground">Enhanced interest rates for investors aged 60+, typically 0.25% to 0.5% higher than regular RD rates.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2">NRI RD</h4>
+                      <p className="text-sm text-muted-foreground">Special RD accounts for Non-Resident Indians with competitive interest rates and foreign currency options.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Benefits of Recurring Deposits</h3>
+                  <div className="space-y-3">
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <div>
+                        <p className="font-semibold">Disciplined Savings</p>
+                        <p className="text-sm text-muted-foreground">Builds a habit of regular savings with fixed monthly deposits. Penalties for missed deposits encourage consistency.</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <div>
+                        <p className="font-semibold">Low Entry Barrier</p>
+                        <p className="text-sm text-muted-foreground">Start with as little as ₹100-500 per month. No need for lump sum investment like FDs.</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <div>
+                        <p className="font-semibold">Loan Facility</p>
+                        <p className="text-sm text-muted-foreground">Avail loans against your RD up to 90% of the deposited amount at minimal interest rates.</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <div>
+                        <p className="font-semibold">Flexible Tenure</p>
+                        <p className="text-sm text-muted-foreground">Choose tenure from 6 months to 10 years based on your financial goals and capacity.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">RD vs Other Investment Options</h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse">
+                      <thead>
+                        <tr className="bg-background/50">
+                          <th className="p-3 text-left">Feature</th>
+                          <th className="p-3 text-left">RD</th>
+                          <th className="p-3 text-left">FD</th>
+                          <th className="p-3 text-left">SIP</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-t border-border">
+                          <td className="p-3">Investment Type</td>
+                          <td className="p-3">Monthly deposits</td>
+                          <td className="p-3">Lump sum</td>
+                          <td className="p-3">Monthly deposits</td>
+                        </tr>
+                        <tr className="border-t border-border">
+                          <td className="p-3">Returns</td>
+                          <td className="p-3 text-warning">Guaranteed (5.5-7.5%)</td>
+                          <td className="p-3 text-warning">Guaranteed (6-8%)</td>
+                          <td className="p-3 text-success">Market-linked (12-15%)</td>
+                        </tr>
+                        <tr className="border-t border-border">
+                          <td className="p-3">Risk</td>
+                          <td className="p-3 text-success">Very Low</td>
+                          <td className="p-3 text-success">Very Low</td>
+                          <td className="p-3 text-warning">Moderate-High</td>
+                        </tr>
+                        <tr className="border-t border-border">
+                          <td className="p-3">Liquidity</td>
+                          <td className="p-3 text-warning">Low (penalty)</td>
+                          <td className="p-3 text-warning">Low (penalty)</td>
+                          <td className="p-3 text-success">High</td>
+                        </tr>
+                        <tr className="border-t border-border">
+                          <td className="p-3">Best For</td>
+                          <td className="p-3">Regular savers</td>
+                          <td className="p-3">Lump sum investors</td>
+                          <td className="p-3">Long-term wealth</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Best RD Interest Rates 2026</h3>
+                  <div className="space-y-3">
+                    <div className="bg-background/50 p-4 rounded-lg flex justify-between items-center">
+                      <div>
+                        <p className="font-semibold">State Bank of India (SBI)</p>
+                        <p className="text-sm text-muted-foreground">Regular: 6.50% | Senior Citizen: 7.00%</p>
+                      </div>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg flex justify-between items-center">
+                      <div>
+                        <p className="font-semibold">HDFC Bank</p>
+                        <p className="text-sm text-muted-foreground">Regular: 6.80% | Senior Citizen: 7.30%</p>
+                      </div>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg flex justify-between items-center">
+                      <div>
+                        <p className="font-semibold">Post Office RD</p>
+                        <p className="text-sm text-muted-foreground">Regular: 6.70% (Updated Quarterly)</p>
+                      </div>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg flex justify-between items-center">
+                      <div>
+                        <p className="font-semibold">Small Finance Banks</p>
+                        <p className="text-sm text-muted-foreground">Regular: 7.50% | Senior Citizen: 8.00%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-3">*Interest rates are indicative and subject to change. Verify current rates with respective banks.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">RD Tax Rules</h3>
+                  <div className="space-y-3">
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">TDS Applicability</p>
+                      <p className="text-sm text-muted-foreground">Banks deduct 10% TDS if total interest exceeds ₹40,000 per year (₹50,000 for senior citizens). TDS is 20% without PAN.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">Income Tax Treatment</p>
+                      <p className="text-sm text-muted-foreground">Interest earned on RD is added to your total income and taxed as per your income tax slab rate.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">No 80C Benefit</p>
+                      <p className="text-sm text-muted-foreground">Unlike PPF and ELSS, regular RD deposits do not qualify for tax deduction under Section 80C.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Frequently Asked Questions</h3>
+                  <div className="space-y-4">
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">What happens if I miss an RD installment?</p>
+                      <p className="text-sm text-muted-foreground">Banks charge a penalty (typically ₹10-50 per missed installment). You can pay the missed amount with penalty. After multiple defaults, the account may be closed prematurely.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">Can I withdraw my RD before maturity?</p>
+                      <p className="text-sm text-muted-foreground">Yes, premature withdrawal is allowed but banks impose penalties (usually 1-2% interest reduction) and you receive lower interest for the actual tenure.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">How is RD different from SIP?</p>
+                      <p className="text-sm text-muted-foreground">RD offers guaranteed returns (6-7%) with zero risk, while SIP invests in mutual funds with market-linked returns (10-15% potential) but carries market risk. RD is for safety, SIP for wealth creation.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">Can I increase my monthly RD deposit?</p>
+                      <p className="text-sm text-muted-foreground">No, RD requires fixed monthly deposits. To save more, you need to open an additional RD account with a higher deposit amount.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Related Calculators</h3>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <a href="/fd" className="bg-background/50 p-4 rounded-lg hover:bg-background/70 transition-colors">
+                      <p className="font-semibold mb-1">FD Calculator</p>
+                      <p className="text-xs text-muted-foreground">Calculate Fixed Deposit returns</p>
+                    </a>
+                    <a href="/sip" className="bg-background/50 p-4 rounded-lg hover:bg-background/70 transition-colors">
+                      <p className="font-semibold mb-1">SIP Calculator</p>
+                      <p className="text-xs text-muted-foreground">Plan systematic investments</p>
+                    </a>
+                    <a href="/emi" className="bg-background/50 p-4 rounded-lg hover:bg-background/70 transition-colors">
+                      <p className="font-semibold mb-1">EMI Calculator</p>
+                      <p className="text-xs text-muted-foreground">Calculate loan EMI amounts</p>
+                    </a>
+                  </div>
+                </div>
               </div>
             </Card>
           </div>

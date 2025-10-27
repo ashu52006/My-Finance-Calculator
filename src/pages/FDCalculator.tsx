@@ -283,20 +283,188 @@ const FDCalculator = () => {
             </div>
           </div>
 
-          <div className="mt-8">
-            <Card className="p-6 bg-gradient-card">
-              <h2 className="text-2xl font-bold mb-4">Understanding Fixed Deposits</h2>
-              <div className="prose prose-invert max-w-none">
-                <p className="text-muted-foreground mb-3">
-                  Fixed Deposits are one of the safest investment options in India. Banks and financial institutions offer FDs with varying interest rates typically ranging from 5% to 7% per annum.
-                </p>
-                <h3 className="text-lg font-semibold mb-2 mt-4">FD Benefits</h3>
-                <ul className="text-muted-foreground space-y-1">
-                  <li>• Guaranteed returns with no market risk</li>
-                  <li>• Higher interest rates for senior citizens</li>
-                  <li>• Loan facility against FD</li>
-                  <li>• Tax benefits under Section 80C (for tax-saving FDs)</li>
-                </ul>
+          <div className="mt-8 space-y-6">
+            <Card className="p-8 bg-gradient-card">
+              <h2 className="text-3xl font-bold mb-6">Understanding Fixed Deposits in India 2026</h2>
+              
+              <div className="space-y-6">
+                <div>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Fixed Deposits (FD) remain one of the safest and most popular investment options in India. With guaranteed returns and capital protection, FDs are ideal for conservative investors and those seeking stable income. Our FD calculator helps you compare interest rates and calculate exact maturity amounts instantly.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">What is a Fixed Deposit?</h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    A Fixed Deposit is a financial instrument offered by banks and NBFCs where you deposit a lump sum amount for a fixed tenure at a predetermined interest rate. The interest rate remains constant throughout the tenure, providing predictable returns. FD interest rates in India typically range from 5% to 8% per annum, with senior citizens receiving an additional 0.25% to 0.5% interest.
+                  </p>
+                  <div className="bg-background/50 p-4 rounded-lg">
+                    <p className="font-semibold mb-2">FD Formula:</p>
+                    <p className="text-muted-foreground font-mono">A = P(1 + r/n)^(nt)</p>
+                    <p className="text-sm text-muted-foreground mt-2">Where: A = Maturity Amount, P = Principal, r = Interest Rate, n = Compounding Frequency, t = Time</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Types of Fixed Deposits</h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2">Regular FD</h4>
+                      <p className="text-sm text-muted-foreground">Standard fixed deposit with flexible tenure from 7 days to 10 years. Interest paid at maturity or periodically.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2">Tax Saving FD</h4>
+                      <p className="text-sm text-muted-foreground">5-year lock-in period with tax deduction up to ₹1.5 lakh under Section 80C. Cannot be withdrawn prematurely.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2">Senior Citizen FD</h4>
+                      <p className="text-sm text-muted-foreground">Special schemes for investors aged 60+ with higher interest rates (0.25%-0.75% extra).</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2">Flexi FD</h4>
+                      <p className="text-sm text-muted-foreground">Combination of savings and FD account. Automatically transfers excess balance to FD for better returns.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">FD Benefits & Features</h3>
+                  <div className="space-y-3">
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <div>
+                        <p className="font-semibold">Guaranteed Returns</p>
+                        <p className="text-sm text-muted-foreground">Unlike market-linked investments, FD returns are guaranteed and not affected by market volatility.</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <div>
+                        <p className="font-semibold">Loan Against FD</p>
+                        <p className="text-sm text-muted-foreground">Get instant loans up to 90% of your FD value at interest rates 1-2% higher than FD rate.</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <div>
+                        <p className="font-semibold">Auto-Renewal Option</p>
+                        <p className="text-sm text-muted-foreground">Set automatic renewal at maturity to continue earning without manual intervention.</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <div>
+                        <p className="font-semibold">Deposit Insurance</p>
+                        <p className="text-sm text-muted-foreground">DICGC insures FD deposits up to ₹5 lakh per depositor per bank, adding an extra safety layer.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Best FD Rates in India 2026</h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse">
+                      <thead>
+                        <tr className="bg-background/50">
+                          <th className="p-3 text-left">Bank/NBFC</th>
+                          <th className="p-3 text-left">Regular Rate</th>
+                          <th className="p-3 text-left">Senior Citizen</th>
+                          <th className="p-3 text-left">Best Tenure</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-t border-border">
+                          <td className="p-3">SBI</td>
+                          <td className="p-3 text-success">6.50%</td>
+                          <td className="p-3 text-success">7.00%</td>
+                          <td className="p-3">2-3 years</td>
+                        </tr>
+                        <tr className="border-t border-border">
+                          <td className="p-3">HDFC Bank</td>
+                          <td className="p-3 text-success">7.00%</td>
+                          <td className="p-3 text-success">7.50%</td>
+                          <td className="p-3">3-5 years</td>
+                        </tr>
+                        <tr className="border-t border-border">
+                          <td className="p-3">ICICI Bank</td>
+                          <td className="p-3 text-success">6.90%</td>
+                          <td className="p-3 text-success">7.40%</td>
+                          <td className="p-3">1-2 years</td>
+                        </tr>
+                        <tr className="border-t border-border">
+                          <td className="p-3">Small Finance Banks</td>
+                          <td className="p-3 text-success">8.00%</td>
+                          <td className="p-3 text-success">8.50%</td>
+                          <td className="p-3">12-24 months</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-2">*Rates are indicative and subject to change. Check with respective banks for current rates.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">FD Tax Implications</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Understanding FD taxation is crucial for accurate return calculations:
+                  </p>
+                  <div className="space-y-3">
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">TDS on FD Interest</p>
+                      <p className="text-sm text-muted-foreground">If interest earned exceeds ₹40,000 per year (₹50,000 for senior citizens), banks deduct 10% TDS. Without PAN, TDS is 20%.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">Tax Slab Application</p>
+                      <p className="text-sm text-muted-foreground">FD interest is added to your income and taxed as per your income tax slab (5%, 20%, or 30%).</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">Form 15G/15H</p>
+                      <p className="text-sm text-muted-foreground">Submit to avoid TDS if your total income is below taxable limit. Form 15H is for senior citizens.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Frequently Asked Questions</h3>
+                  <div className="space-y-4">
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">Can I break my FD before maturity?</p>
+                      <p className="text-sm text-muted-foreground">Yes, premature withdrawal is allowed for most FDs (except tax-saving FD). Banks charge a penalty of 0.5-1% and may offer lower interest rates for the actual tenure.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">Which is better: Monthly or Quarterly compounding?</p>
+                      <p className="text-sm text-muted-foreground">More frequent compounding (monthly) gives slightly higher returns than quarterly due to compound interest effect. However, the difference is usually marginal.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">Is FD better than Savings Account?</p>
+                      <p className="text-sm text-muted-foreground">FDs typically offer 2-3% higher interest than savings accounts. However, FDs have lock-in periods while savings accounts offer liquidity. Use FDs for surplus funds you don't need immediately.</p>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <p className="font-semibold mb-2">What happens at FD maturity?</p>
+                      <p className="text-sm text-muted-foreground">At maturity, you receive principal + interest in your account. You can renew the FD, partially withdraw, or close it completely based on your needs.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Related Calculators</h3>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <a href="/rd" className="bg-background/50 p-4 rounded-lg hover:bg-background/70 transition-colors">
+                      <p className="font-semibold mb-1">RD Calculator</p>
+                      <p className="text-xs text-muted-foreground">Calculate Recurring Deposit maturity</p>
+                    </a>
+                    <a href="/sip" className="bg-background/50 p-4 rounded-lg hover:bg-background/70 transition-colors">
+                      <p className="font-semibold mb-1">SIP Calculator</p>
+                      <p className="text-xs text-muted-foreground">Plan systematic investments</p>
+                    </a>
+                    <a href="/emi" className="bg-background/50 p-4 rounded-lg hover:bg-background/70 transition-colors">
+                      <p className="font-semibold mb-1">EMI Calculator</p>
+                      <p className="text-xs text-muted-foreground">Calculate loan EMI amounts</p>
+                    </a>
+                  </div>
+                </div>
               </div>
             </Card>
           </div>
