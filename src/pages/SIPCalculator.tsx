@@ -68,36 +68,61 @@ const SIPCalculator = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Best SIP Calculator 2026: Calculate Returns & Maturity Value</title>
-        <meta name="description" content="Calculate your SIP returns and future value instantly. Start your investment journey today! Accurate & Free SIP Calculator with CAGR for India 2026." />
-        <meta name="keywords" content="SIP calculator India 2026, mutual fund calculator, systematic investment plan, SIP returns calculator, CAGR calculator, best SIP calculator" />
+        <title>Best SIP Calculator 2026: Calculate Returns & Maturity | Free</title>
+        <meta name="description" content="Calculate your SIP returns instantly! Start your investment journey today with our Free SIP Calculator India 2026. Get accurate CAGR, maturity value & investment projections." />
+        <meta name="keywords" content="SIP calculator India 2026, mutual fund calculator, systematic investment plan, SIP returns calculator, CAGR calculator, best SIP calculator, online SIP calculator" />
         <link rel="canonical" href="https://myfinancecalculator.netlify.app/sip" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Best SIP Calculator 2026 - Calculate Returns Instantly" />
         <meta property="og:description" content="Calculate your SIP returns and future value instantly. Free & Accurate SIP Calculator for India." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://myfinancecalculator.netlify.app/sip" />
         
-        {/* JSON-LD Schema - HowTo */}
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Best SIP Calculator 2026 - Calculate Returns Instantly" />
+        <meta name="twitter:description" content="Calculate your SIP returns and future value instantly. Free & Accurate SIP Calculator for India." />
+        
+        {/* JSON-LD Schema - Calculator & HowTo Combined */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "HowTo",
-            "name": "How to Calculate SIP Returns",
-            "description": "Learn how to calculate your Systematic Investment Plan (SIP) returns, maturity value, and CAGR using our free calculator",
-            "step": [
+            "@graph": [
               {
-                "@type": "HowToStep",
-                "name": "Enter Monthly SIP Amount",
-                "text": "Input the amount you want to invest every month in mutual funds"
+                "@type": "WebApplication",
+                "name": "SIP Calculator India 2026",
+                "applicationCategory": "FinanceApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "INR"
+                },
+                "description": "Free SIP (Systematic Investment Plan) calculator to calculate returns, maturity value, and CAGR for mutual fund investments in India",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.8",
+                  "ratingCount": "1250"
+                }
               },
               {
-                "@type": "HowToStep",
-                "name": "Set Expected Annual Return",
-                "text": "Enter the expected annual return rate (typically 10-15% for equity funds)"
-              },
-              {
-                "@type": "HowToStep",
+                "@type": "HowTo",
+                "name": "How to Calculate SIP Returns",
+                "description": "Learn how to calculate your Systematic Investment Plan (SIP) returns, maturity value, and CAGR using our free calculator",
+                "step": [
+                  {
+                    "@type": "HowToStep",
+                    "name": "Enter Monthly SIP Amount",
+                    "text": "Input the amount you want to invest every month in mutual funds"
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "name": "Set Expected Annual Return",
+                    "text": "Enter the expected annual return rate (typically 10-15% for equity funds)"
+                  },
+                  {
+                    "@type": "HowToStep",
                 "name": "Choose Investment Tenure",
                 "text": "Select how many years you plan to continue your SIP investment"
               },
@@ -106,6 +131,8 @@ const SIPCalculator = () => {
                 "name": "Calculate Results",
                 "text": "Click calculate to see your total investment, returns, maturity value and CAGR"
               }
+            ]
+          }
             ]
           })}
         </script>

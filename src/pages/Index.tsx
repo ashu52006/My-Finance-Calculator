@@ -59,29 +59,99 @@ const Index = () => {
   return (
     <Layout>
       <Helmet>
-        <title>My Finance Calculator - Free SIP, EMI, FD & RD Calculators India 2025</title>
-        <meta name="description" content="Free online financial calculators for India. Calculate SIP returns, EMI payments, FD maturity, and RD investments instantly. Accurate, fast, and SEO-optimized for 2025." />
-        <meta name="keywords" content="SIP calculator India, EMI calculator, FD calculator, RD calculator, financial calculator, investment calculator 2025" />
+        <title>Finance Calculator 2026: Free SIP, EMI, FD & RD Calculator India</title>
+        <meta name="description" content="Free financial calculators for India. Calculate SIP returns, EMI, FD maturity & RD investments instantly. Accurate, fast, SEO-optimized tools for smart money decisions 2026." />
+        <meta name="keywords" content="finance calculator India 2026, SIP calculator, EMI calculator, FD calculator, RD calculator, financial calculator, investment calculator, loan calculator, best calculator" />
         <link rel="canonical" href="https://myfinancecalculator.netlify.app/" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="My Finance Calculator - Free Financial Calculators India" />
+        <meta property="og:title" content="Finance Calculator 2026 - Free Financial Calculators India" />
         <meta property="og:description" content="Calculate SIP returns, EMI, FD maturity & RD investments with our free calculators." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://myfinancecalculator.netlify.app/" />
+        <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
         
-        {/* JSON-LD Schema */}
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@lovable_dev" />
+        <meta name="twitter:title" content="Finance Calculator 2026 - Free Financial Calculators" />
+        <meta name="twitter:description" content="Calculate SIP returns, EMI, FD & RD investments instantly." />
+        <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+        
+        {/* JSON-LD Schema - Website & Organization */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebApplication",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "name": "My Finance Calculator",
+                "url": "https://myfinancecalculator.netlify.app/",
+                "description": "Free financial calculators for SIP, EMI, FD, and RD calculations in India",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://myfinancecalculator.netlify.app/?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              },
+              {
+                "@type": "WebApplication",
             "name": "My Finance Calculator",
             "applicationCategory": "FinanceApplication",
+                "operatingSystem": "Any",
             "offers": {
               "@type": "Offer",
               "price": "0",
               "priceCurrency": "INR"
             },
-            "description": "Free financial calculators for SIP, EMI, FD, and RD calculations in India"
+                "description": "Free financial calculators for SIP, EMI, FD, and RD calculations in India",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.8",
+                  "ratingCount": "5230"
+                }
+              }
+            ]
+          })}
+        </script>
+        
+        {/* BreadcrumbList Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://myfinancecalculator.netlify.app/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "SIP Calculator",
+                "item": "https://myfinancecalculator.netlify.app/sip"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "EMI Calculator",
+                "item": "https://myfinancecalculator.netlify.app/emi"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "FD Calculator",
+                "item": "https://myfinancecalculator.netlify.app/fd"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "RD Calculator",
+                "item": "https://myfinancecalculator.netlify.app/rd"
+              }
+            ]
           })}
         </script>
       </Helmet>

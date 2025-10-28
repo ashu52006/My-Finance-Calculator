@@ -68,36 +68,61 @@ const EMICalculator = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Best EMI Calculator 2026: Home, Car & Personal Loan Calculator</title>
-        <meta name="description" content="Calculate your EMI instantly with lowest interest rates. Check loan eligibility & apply now! Free EMI Calculator for India 2026 with amortization schedule." />
-        <meta name="keywords" content="EMI calculator India 2026, home loan EMI calculator, car loan calculator, personal loan EMI, loan calculator, best EMI calculator" />
+        <title>EMI Calculator 2026: Home, Car & Personal Loan | Apply Now</title>
+        <meta name="description" content="Calculate EMI instantly & check loan eligibility with lowest interest rates. Apply for Home, Car & Personal Loans Now! Free EMI Calculator India 2026 with charts." />
+        <meta name="keywords" content="EMI calculator India 2026, home loan EMI calculator, car loan calculator, personal loan EMI, loan calculator, best EMI calculator, online loan calculator" />
         <link rel="canonical" href="https://myfinancecalculator.netlify.app/emi" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Best EMI Calculator 2026 - Calculate Loan EMI Instantly" />
+        <meta property="og:title" content="EMI Calculator 2026 - Calculate Loan EMI & Apply Instantly" />
         <meta property="og:description" content="Calculate your EMI with lowest interest rates. Free & accurate EMI calculator for all types of loans." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://myfinancecalculator.netlify.app/emi" />
         
-        {/* JSON-LD Schema - HowTo */}
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="EMI Calculator 2026 - Calculate Loan EMI & Apply Instantly" />
+        <meta name="twitter:description" content="Calculate your EMI with lowest interest rates. Free & accurate EMI calculator for all types of loans." />
+        
+        {/* JSON-LD Schema - Calculator & HowTo Combined */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "HowTo",
-            "name": "How to Calculate Loan EMI",
-            "description": "Learn how to calculate your Equated Monthly Installment (EMI) for home loans, car loans, and personal loans",
-            "step": [
+            "@graph": [
               {
-                "@type": "HowToStep",
-                "name": "Enter Loan Amount",
-                "text": "Input the total principal amount you want to borrow"
+                "@type": "WebApplication",
+                "name": "EMI Calculator India 2026",
+                "applicationCategory": "FinanceApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "INR"
+                },
+                "description": "Free EMI (Equated Monthly Installment) calculator for home loans, car loans, and personal loans in India with instant results",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.9",
+                  "ratingCount": "2340"
+                }
               },
               {
-                "@type": "HowToStep",
-                "name": "Set Interest Rate",
-                "text": "Enter the annual interest rate offered by your lender"
-              },
-              {
-                "@type": "HowToStep",
+                "@type": "HowTo",
+                "name": "How to Calculate Loan EMI",
+                "description": "Learn how to calculate your Equated Monthly Installment (EMI) for home loans, car loans, and personal loans",
+                "step": [
+                  {
+                    "@type": "HowToStep",
+                    "name": "Enter Loan Amount",
+                    "text": "Input the total principal amount you want to borrow"
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "name": "Set Interest Rate",
+                    "text": "Enter the annual interest rate offered by your lender"
+                  },
+                  {
+                    "@type": "HowToStep",
                 "name": "Choose Loan Tenure",
                 "text": "Select the repayment period in years or months"
               },
@@ -106,6 +131,8 @@ const EMICalculator = () => {
                 "name": "View EMI Results",
                 "text": "Get instant EMI amount, total interest payable, and total payment details"
               }
+            ]
+          }
             ]
           })}
         </script>

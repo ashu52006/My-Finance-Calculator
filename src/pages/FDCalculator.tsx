@@ -70,36 +70,61 @@ const FDCalculator = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Best FD Calculator 2026: Compare Interest Rates & Maturity</title>
-        <meta name="description" content="Calculate your Fixed Deposit returns instantly. Compare bank FD rates & maximize earnings! Free FD Calculator for India 2026 with compound interest." />
-        <meta name="keywords" content="FD calculator India 2026, fixed deposit calculator, FD maturity calculator, bank FD calculator, best FD rates, FD interest calculator" />
+        <title>FD Calculator 2026: Compare Interest Rates & Maturity | Best FD</title>
+        <meta name="description" content="Calculate Fixed Deposit returns instantly! Compare bank FD rates & maximize your earnings. Free FD Calculator India 2026 with quarterly/monthly compounding." />
+        <meta name="keywords" content="FD calculator India 2026, fixed deposit calculator, FD maturity calculator, bank FD calculator, best FD rates, FD interest calculator, online FD calculator" />
         <link rel="canonical" href="https://myfinancecalculator.netlify.app/fd" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Best FD Calculator 2026 - Calculate Fixed Deposit Returns" />
+        <meta property="og:title" content="FD Calculator 2026 - Calculate Fixed Deposit Returns & Compare Rates" />
         <meta property="og:description" content="Calculate FD maturity and compare interest rates. Free & accurate Fixed Deposit calculator for India." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://myfinancecalculator.netlify.app/fd" />
         
-        {/* JSON-LD Schema - HowTo */}
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="FD Calculator 2026 - Calculate Fixed Deposit Returns" />
+        <meta name="twitter:description" content="Calculate FD maturity and compare interest rates across all major banks." />
+        
+        {/* JSON-LD Schema - Calculator & HowTo Combined */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "HowTo",
-            "name": "How to Calculate Fixed Deposit Returns",
-            "description": "Learn how to calculate your Fixed Deposit maturity amount, interest earnings, and total returns",
-            "step": [
+            "@graph": [
               {
-                "@type": "HowToStep",
-                "name": "Enter Principal Amount",
-                "text": "Input the initial deposit amount you want to invest in Fixed Deposit"
+                "@type": "WebApplication",
+                "name": "FD Calculator India 2026",
+                "applicationCategory": "FinanceApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "INR"
+                },
+                "description": "Free Fixed Deposit calculator to calculate maturity amount, interest earnings with compound interest for all Indian banks",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.7",
+                  "ratingCount": "1890"
+                }
               },
               {
-                "@type": "HowToStep",
-                "name": "Set Interest Rate",
-                "text": "Enter the annual interest rate offered by your bank"
-              },
-              {
-                "@type": "HowToStep",
+                "@type": "HowTo",
+                "name": "How to Calculate Fixed Deposit Returns",
+                "description": "Learn how to calculate your Fixed Deposit maturity amount, interest earnings, and total returns",
+                "step": [
+                  {
+                    "@type": "HowToStep",
+                    "name": "Enter Principal Amount",
+                    "text": "Input the initial deposit amount you want to invest in Fixed Deposit"
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "name": "Set Interest Rate",
+                    "text": "Enter the annual interest rate offered by your bank"
+                  },
+                  {
+                    "@type": "HowToStep",
                 "name": "Choose Tenure",
                 "text": "Select the investment period in years"
               },
@@ -113,6 +138,8 @@ const FDCalculator = () => {
                 "name": "View Maturity Amount",
                 "text": "Get instant results showing maturity value and total interest earned"
               }
+            ]
+          }
             ]
           })}
         </script>

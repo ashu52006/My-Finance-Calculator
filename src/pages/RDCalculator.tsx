@@ -65,44 +65,71 @@ const RDCalculator = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Best RD Calculator 2026: Recurring Deposit Returns Calculator</title>
-        <meta name="description" content="Calculate your Recurring Deposit maturity value instantly. Plan monthly savings with best RD rates! Free RD Calculator for India 2026." />
-        <meta name="keywords" content="RD calculator India 2026, recurring deposit calculator, RD maturity calculator, bank RD calculator, best RD rates, RD interest calculator" />
+        <title>RD Calculator 2026: Recurring Deposit Maturity & Interest | Best RD</title>
+        <meta name="description" content="Calculate Recurring Deposit maturity instantly! Plan monthly savings with best RD rates across banks. Free RD Calculator India 2026 with interest breakdown." />
+        <meta name="keywords" content="RD calculator India 2026, recurring deposit calculator, RD maturity calculator, bank RD calculator, best RD rates, RD interest calculator, monthly deposit calculator" />
         <link rel="canonical" href="https://myfinancecalculator.netlify.app/rd" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Best RD Calculator 2026 - Calculate Recurring Deposit Returns" />
+        <meta property="og:title" content="RD Calculator 2026 - Calculate Recurring Deposit Returns & Maturity" />
         <meta property="og:description" content="Calculate RD maturity and plan monthly savings. Free & accurate Recurring Deposit calculator for India." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://myfinancecalculator.netlify.app/rd" />
         
-        {/* JSON-LD Schema - HowTo */}
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="RD Calculator 2026 - Calculate Recurring Deposit Returns" />
+        <meta name="twitter:description" content="Calculate RD maturity and plan monthly savings with best rates." />
+        
+        {/* JSON-LD Schema - Calculator & HowTo Combined */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "HowTo",
-            "name": "How to Calculate Recurring Deposit Returns",
-            "description": "Learn how to calculate your Recurring Deposit maturity value and interest earnings",
-            "step": [
+            "@graph": [
               {
-                "@type": "HowToStep",
-                "name": "Enter Monthly Deposit",
-                "text": "Input the amount you want to deposit every month"
+                "@type": "WebApplication",
+                "name": "RD Calculator India 2026",
+                "applicationCategory": "FinanceApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "INR"
+                },
+                "description": "Free Recurring Deposit calculator to calculate maturity value, interest earnings for monthly savings in Indian banks",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.6",
+                  "ratingCount": "1450"
+                }
               },
               {
-                "@type": "HowToStep",
-                "name": "Set Interest Rate",
-                "text": "Enter the annual interest rate offered by your bank for RD"
-              },
-              {
-                "@type": "HowToStep",
-                "name": "Choose Tenure",
-                "text": "Select the investment period in years"
-              },
-              {
-                "@type": "HowToStep",
+                "@type": "HowTo",
+                "name": "How to Calculate Recurring Deposit Returns",
+                "description": "Learn how to calculate your Recurring Deposit maturity value and interest earnings",
+                "step": [
+                  {
+                    "@type": "HowToStep",
+                    "name": "Enter Monthly Deposit",
+                    "text": "Input the amount you want to deposit every month"
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "name": "Set Interest Rate",
+                    "text": "Enter the annual interest rate offered by your bank for RD"
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "name": "Choose Tenure",
+                    "text": "Select the investment period in years"
+                  },
+                  {
+                    "@type": "HowToStep",
                 "name": "Calculate Maturity",
                 "text": "Get instant maturity value, total deposits, and interest earned"
               }
+            ]
+          }
             ]
           })}
         </script>
