@@ -8,6 +8,12 @@ import SIPCalculator from "./pages/SIPCalculator";
 import EMICalculator from "./pages/EMICalculator";
 import FDCalculator from "./pages/FDCalculator";
 import RDCalculator from "./pages/RDCalculator";
+import GSTCalculator from "./pages/GSTCalculator";
+import IncomeTaxCalculator from "./pages/IncomeTaxCalculator";
+import HomeLoanCalculator from "./pages/HomeLoanCalculator";
+import PPFCalculator from "./pages/PPFCalculator";
+import PersonalLoanCalculator from "./pages/PersonalLoanCalculator";
+import CompoundInterestCalculator from "./pages/CompoundInterestCalculator";
 import Subscription from "./pages/Subscription";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
@@ -26,6 +32,12 @@ const App = () => (
           <Route path="/emi" element={<EMICalculator />} />
           <Route path="/fd" element={<FDCalculator />} />
           <Route path="/rd" element={<RDCalculator />} />
+          <Route path="/gst" element={<GSTCalculator />} />
+          <Route path="/income-tax" element={<IncomeTaxCalculator />} />
+          <Route path="/home-loan" element={<HomeLoanCalculator />} />
+          <Route path="/ppf" element={<PPFCalculator />} />
+          <Route path="/personal-loan" element={<PersonalLoanCalculator />} />
+          <Route path="/compound-interest" element={<CompoundInterestCalculator />} />
           <Route path="/subscription" element={<Subscription />} />
           <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

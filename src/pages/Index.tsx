@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Calculator, TrendingUp, PiggyBank, Wallet, CreditCard, Crown, ArrowRight, CheckCircle } from 'lucide-react';
+import { Calculator, TrendingUp, PiggyBank, Wallet, CreditCard, Crown, ArrowRight, CheckCircle, Receipt, FileText, Home, Shield, BadgeIndianRupee, BarChart3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Layout from '@/components/Layout';
@@ -44,6 +44,48 @@ const Index = () => {
       description: 'Calculate returns on Recurring Deposit schemes',
       path: '/rd',
       color: 'from-orange-500 to-red-500'
+    },
+    {
+      icon: Receipt,
+      title: 'GST Calculator',
+      description: 'Calculate GST, CGST, SGST and IGST for accurate tax compliance',
+      path: '/gst',
+      color: 'from-indigo-500 to-blue-500'
+    },
+    {
+      icon: FileText,
+      title: 'Income Tax Calculator',
+      description: 'Calculate income tax for FY 2025-26 with old & new regime',
+      path: '/income-tax',
+      color: 'from-red-500 to-pink-500'
+    },
+    {
+      icon: Home,
+      title: 'Home Loan Calculator',
+      description: 'Calculate home loan EMI and total interest payable',
+      path: '/home-loan',
+      color: 'from-teal-500 to-cyan-500'
+    },
+    {
+      icon: Shield,
+      title: 'PPF Calculator',
+      description: 'Calculate Public Provident Fund maturity and returns',
+      path: '/ppf',
+      color: 'from-emerald-500 to-green-500'
+    },
+    {
+      icon: BadgeIndianRupee,
+      title: 'Personal Loan Calculator',
+      description: 'Calculate personal loan EMI and compare best rates',
+      path: '/personal-loan',
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      icon: BarChart3,
+      title: 'Compound Interest Calculator',
+      description: 'Calculate compound interest with various compounding frequencies',
+      path: '/compound-interest',
+      color: 'from-violet-500 to-purple-500'
     }
   ];
 
@@ -59,9 +101,9 @@ const Index = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Finance Calculator 2026: Free SIP, EMI, FD & RD Calculator India</title>
-        <meta name="description" content="Free financial calculators for India. Calculate SIP returns, EMI, FD maturity & RD investments instantly. Accurate, fast, SEO-optimized tools for smart money decisions 2026." />
-        <meta name="keywords" content="finance calculator India 2026, SIP calculator, EMI calculator, FD calculator, RD calculator, financial calculator, investment calculator, loan calculator, best calculator" />
+        <title>Finance Calculator 2026: Free SIP, EMI, FD, RD, GST, Income Tax Calculator India</title>
+        <meta name="description" content="Free financial calculators India 2026. Calculate SIP, EMI, FD, RD, GST, Income Tax, Home Loan, PPF, Personal Loan & Compound Interest instantly. Accurate tools for smart decisions." />
+        <meta name="keywords" content="finance calculator India 2026, SIP calculator, EMI calculator, FD calculator, RD calculator, GST calculator, income tax calculator, home loan calculator, PPF calculator, personal loan calculator, compound interest calculator" />
         <link rel="canonical" href="https://myfinancecalculator.netlify.app/" />
         
         {/* Open Graph */}
@@ -171,7 +213,7 @@ const Index = () => {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Calculate SIP returns, EMI payments, FD maturity, and RD investments with our free, accurate, and instant calculators. Make informed financial decisions in 2025.
+            Calculate SIP, EMI, FD, RD, GST, Income Tax, Home Loan, PPF, Personal Loan & Compound Interest with our free calculators. Make informed financial decisions in 2026.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/sip">
@@ -278,7 +320,7 @@ const Index = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
             <h2 className="text-3xl font-bold mb-8">Our Financial Calculators</h2>
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {calculators.map((calc) => {
                 const Icon = calc.icon;
                 return (
