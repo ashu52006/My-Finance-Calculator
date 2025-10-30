@@ -25,13 +25,17 @@ const AdSenseSlot = ({ slot, className = '' }: AdSenseSlotProps) => {
       document.head.appendChild(script);
     }
 
-    // Initialize ads
-    try {
-      // @ts-ignore
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (err) {
-      console.error('AdSense error:', err);
-    }
+    // Defer ad initialization to next frame to prevent forced reflow
+    const timeoutId = setTimeout(() => {
+      try {
+        // @ts-ignore
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (err) {
+        console.error('AdSense error:', err);
+      }
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
