@@ -104,6 +104,7 @@ const Index = () => {
         <title>Finance Calculator 2026: Free SIP, EMI, FD, RD, GST, Income Tax Calculator India</title>
         <meta name="description" content="Free financial calculators India 2026. Calculate SIP, EMI, FD, RD, GST, Income Tax, Home Loan, PPF, Personal Loan & Compound Interest instantly. Accurate tools for smart decisions." />
         <meta name="keywords" content="finance calculator India 2026, SIP calculator, EMI calculator, FD calculator, RD calculator, GST calculator, income tax calculator, home loan calculator, PPF calculator, personal loan calculator, compound interest calculator" />
+        <meta name="google-site-verification" content="zs10Rr2HXxcXcN9E5IYGpjpuVdhI6NiFeIleNawF9Yc" />
         <link rel="canonical" href="https://myfinancecalculator.netlify.app/" />
         
         {/* Open Graph */}
