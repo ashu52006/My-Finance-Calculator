@@ -4,9 +4,10 @@ import { Card } from '@/components/ui/card';
 interface AdSenseSlotProps {
   slot: 'header' | 'sidebar' | 'footer' | 'inline';
   className?: string;
+  adSlot?: string;
 }
 
-const AdSenseSlot = ({ slot, className = '' }: AdSenseSlotProps) => {
+const AdSenseSlot = ({ slot, className = '', adSlot = '3980392042' }: AdSenseSlotProps) => {
   const heights = {
     header: 'h-24',
     sidebar: 'h-96',
@@ -44,9 +45,9 @@ const AdSenseSlot = ({ slot, className = '' }: AdSenseSlotProps) => {
     >
       <ins
         className="adsbygoogle"
-        style={{ display: 'block', width: '100%', height: '100%' }}
+        style={{ display: 'block' }}
         data-ad-client="ca-pub-4018627787030136"
-        data-ad-slot="8128554457"
+        data-ad-slot={adSlot}
         data-ad-format="auto"
         data-full-width-responsive="true"
       ></ins>
