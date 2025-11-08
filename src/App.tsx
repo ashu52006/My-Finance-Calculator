@@ -17,6 +17,9 @@ import CompoundInterestCalculator from "./pages/CompoundInterestCalculator";
 import Subscription from "./pages/Subscription";
 import Admin from "./pages/Admin";
 import Policy from "./pages/Policy";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +45,9 @@ const App = () => (
           <Route path="/subscription" element={<Subscription />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/policy" element={<Policy />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<FAQ />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

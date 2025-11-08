@@ -4,6 +4,7 @@ import { Calculator, TrendingUp, PiggyBank, Wallet, CreditCard, Crown, Menu, X }
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { getUserSubscription } from '@/utils/subscription';
+import CookieConsent from '@/components/CookieConsent';
 
 interface LayoutProps {
   children: ReactNode;
@@ -107,6 +108,9 @@ const Layout = ({ children }: LayoutProps) => {
       {/* Main Content */}
       <main className="flex-1">{children}</main>
 
+      {/* Cookie Consent */}
+      <CookieConsent />
+
       {/* Footer */}
       <footer className="border-t border-border bg-card mt-12">
         <div className="container mx-auto px-4 py-8">
@@ -114,8 +118,13 @@ const Layout = ({ children }: LayoutProps) => {
             <div className="space-y-3">
               <h3 className="font-semibold text-lg">About</h3>
               <p className="text-sm text-muted-foreground">
-                My Finance Calculator helps you make informed financial decisions with accurate calculators and insights.
+                CalcGenius helps you make informed financial decisions with accurate calculators and insights.
               </p>
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/about" className="text-muted-foreground hover:text-primary">About Us</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
+                <li><Link to="/faq" className="text-muted-foreground hover:text-primary">FAQ</Link></li>
+              </ul>
             </div>
             <div className="space-y-3">
               <h3 className="font-semibold text-lg">Calculators</h3>
@@ -144,7 +153,7 @@ const Layout = ({ children }: LayoutProps) => {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>&copy; 2025 My Finance Calculator. All rights reserved.</p>
+            <p>&copy; 2025 CalcGenius. All rights reserved.</p>
           </div>
         </div>
       </footer>
