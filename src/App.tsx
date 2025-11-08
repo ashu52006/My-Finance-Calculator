@@ -16,6 +16,7 @@ import PersonalLoanCalculator from "./pages/PersonalLoanCalculator";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator";
 import Subscription from "./pages/Subscription";
 import Admin from "./pages/Admin";
+import Policy from "./pages/Policy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/compound-interest" element={<CompoundInterestCalculator />} />
           <Route path="/subscription" element={<Subscription />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/policy" element={<Policy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

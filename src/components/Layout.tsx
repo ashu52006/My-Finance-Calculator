@@ -137,9 +137,9 @@ const Layout = ({ children }: LayoutProps) => {
             <div className="space-y-3">
               <h3 className="font-semibold text-lg">Legal</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-muted-foreground hover:text-primary">Privacy Policy</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary">Terms of Service</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary">Disclaimer</a></li>
+                <li><Link to="/policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+                <li><Link to="/policy" className="text-muted-foreground hover:text-primary">Terms of Service</Link></li>
+                <li><Link to="/policy" className="text-muted-foreground hover:text-primary">Disclaimer</Link></li>
               </ul>
             </div>
           </div>
