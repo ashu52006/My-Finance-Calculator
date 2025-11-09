@@ -23,6 +23,10 @@ const Layout = ({ children }: LayoutProps) => {
     { path: '/rd', label: 'RD Calculator', icon: Wallet },
   ];
 
+  const handleFooterClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
@@ -121,18 +125,18 @@ const Layout = ({ children }: LayoutProps) => {
                 CalcGenius helps you make informed financial decisions with accurate calculators and insights.
               </p>
               <ul className="space-y-2 text-sm">
-                <li><Link to="/about" className="text-muted-foreground hover:text-primary">About Us</Link></li>
-                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
-                <li><Link to="/faq" className="text-muted-foreground hover:text-primary">FAQ</Link></li>
+                <li><Link to="/about" onClick={handleFooterClick} className="text-muted-foreground hover:text-primary">About Us</Link></li>
+                <li><Link to="/contact" onClick={handleFooterClick} className="text-muted-foreground hover:text-primary">Contact</Link></li>
+                <li><Link to="/faq" onClick={handleFooterClick} className="text-muted-foreground hover:text-primary">FAQ</Link></li>
               </ul>
             </div>
             <div className="space-y-3">
               <h3 className="font-semibold text-lg">Calculators</h3>
               <ul className="space-y-2 text-sm">
-                <li><Link to="/sip" className="text-muted-foreground hover:text-primary">SIP Calculator</Link></li>
-                <li><Link to="/emi" className="text-muted-foreground hover:text-primary">EMI Calculator</Link></li>
-                <li><Link to="/fd" className="text-muted-foreground hover:text-primary">FD Calculator</Link></li>
-                <li><Link to="/rd" className="text-muted-foreground hover:text-primary">RD Calculator</Link></li>
+                <li><Link to="/sip" onClick={handleFooterClick} className="text-muted-foreground hover:text-primary">SIP Calculator</Link></li>
+                <li><Link to="/emi" onClick={handleFooterClick} className="text-muted-foreground hover:text-primary">EMI Calculator</Link></li>
+                <li><Link to="/fd" onClick={handleFooterClick} className="text-muted-foreground hover:text-primary">FD Calculator</Link></li>
+                <li><Link to="/rd" onClick={handleFooterClick} className="text-muted-foreground hover:text-primary">RD Calculator</Link></li>
               </ul>
             </div>
             <div className="space-y-3">
@@ -146,9 +150,9 @@ const Layout = ({ children }: LayoutProps) => {
             <div className="space-y-3">
               <h3 className="font-semibold text-lg">Legal</h3>
               <ul className="space-y-2 text-sm">
-                <li><Link to="/policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link to="/policy" className="text-muted-foreground hover:text-primary">Terms of Service</Link></li>
-                <li><Link to="/policy" className="text-muted-foreground hover:text-primary">Disclaimer</Link></li>
+                <li><Link to="/policy" onClick={handleFooterClick} className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+                <li><Link to="/policy" onClick={handleFooterClick} className="text-muted-foreground hover:text-primary">Terms of Service</Link></li>
+                <li><Link to="/policy" onClick={handleFooterClick} className="text-muted-foreground hover:text-primary">Disclaimer</Link></li>
               </ul>
             </div>
           </div>
