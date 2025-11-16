@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Card } from '@/components/ui/card';
 
 interface AdSenseSlotProps {
@@ -7,7 +7,9 @@ interface AdSenseSlotProps {
   adSlot?: string;
 }
 
-const AdSenseSlot = ({ slot, className = '', adSlot = '3980392042' }: AdSenseSlotProps) => {
+const AdSenseSlot = ({ slot, className = '' }: AdSenseSlotProps) => {
+  const adContainerRef = useRef<HTMLDivElement>(null);
+
   const heights = {
     header: 'h-24',
     sidebar: 'h-96',
@@ -16,41 +18,39 @@ const AdSenseSlot = ({ slot, className = '', adSlot = '3980392042' }: AdSenseSlo
   };
 
   useEffect(() => {
-    // Load AdSense script dynamically if not already loaded
-    if (!document.querySelector('script[src*="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]')) {
+    // Load Adsterra script dynamically
+    const scriptId = 'adsterra-invoke-script';
+    
+    if (!document.getElementById(scriptId)) {
       const script = document.createElement('script');
+      script.id = scriptId;
+      script.type = 'text/javascript';
+      script.src = '//www.highperformanceformat.com/f9fc60fed9d81020328f7605ecf0ed88/invoke.js';
       script.async = true;
-      script.src =
-        'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4018627787030136';
-      script.crossOrigin = 'anonymous';
-      document.head.appendChild(script);
-    }
-
-    // Defer ad initialization to next frame to prevent forced reflow
-    const timeoutId = setTimeout(() => {
-      try {
-        // @ts-ignore
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (err) {
-        console.error('AdSense error:', err);
+      
+      if (adContainerRef.current) {
+        adContainerRef.current.appendChild(script);
       }
-    }, 100);
-
-    return () => clearTimeout(timeoutId);
+    }
   }, []);
 
   return (
     <Card
       className={`${heights[slot]} ${className} bg-muted/50 border-dashed flex items-center justify-center`}
     >
-      <ins
-        className="adsbygoogle"
-        style={{ display: 'block' }}
-        data-ad-client="ca-pub-4018627787030136"
-        data-ad-slot={adSlot}
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
+      <div ref={adContainerRef}>
+        <script type="text/javascript">
+          {`
+            atOptions = {
+              'key' : 'f9fc60fed9d81020328f7605ecf0ed88',
+              'format' : 'iframe',
+              'height' : 250,
+              'width' : 300,
+              'params' : {}
+            };
+          `}
+        </script>
+      </div>
     </Card>
   );
 };
